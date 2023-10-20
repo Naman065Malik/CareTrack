@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareTrack | Hospital</title>
+    <style>
+body {
+            background-image: url(/static/img/background.jfif);
+            background-size: cover;
+            margin: 8px 8px;
+        }
+
+        .navbar {
+            height: 115px;
+            display: flex;
+            justify-content: space-between;
+
+            border-radius: 20px;
+            align-items: center;
+
+
+        }
+        .logo{
+            height: 100px;
+            width: 100px;
+        }
+        .logo img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 20px;
+            box-shadow: 0px 3px 7px grey;
+            ;
+        }
+        
+        .profile_pic img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 55px;
+            box-shadow: 0px 3px 7px grey;
+
+        }
+
+        .name p {
+            font-size: 50px;
+            font-family: cursive;
+            color: blueviolet;
+            text-shadow: 0px 3px 3px;
+        }
+        .ambulance_status{
+            
+            height: 505px;
+            width: 15%;
+            border: 2px solid blueviolet;
+            background-color: rgba(5, 5, 128, 0.1);
+            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: 1px 4px 3px grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+    
+        }
+        .ambulance_status_statement {
+            font-size: 20px;
+            text-align: center;
+            height: 40px;
+            width: 205px;
+            background-color: blueviolet;
+            color: palegreen;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .ambulance_list {
+            display: block;
+            border-radius: 20px;
+            height: 450px;
+            overflow: auto;
+
+        }
+
+        .ambulance_list::-webkit-scrollbar {
+            width: 5px;
+            background-clip: padding-box;
+            overflow: auto;
+        }
+
+        
+
+        .ambulance {
+            height: 80px;
+            width: 180px;
+            align-self: center;
+            background-color:palevioletred;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 10px 4px 3px grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: center;
+            border: 2px solid blueviolet ;
+            }
+        .ambulance p{
+            font-size: 16px;
+            margin: 2px 2px ;
+            color: purple;
+            
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+        }
+        .mid{
+            display: flex;
+            flex-direction: column;
+        }
+        .emergencies{
+            height: 70px;
+            width: 750px;
+            display: block;
+            background-color: rgba(5, 5, 128, 0.1);
+            overflow: auto;
+            border-radius: 20px;
+            box-shadow: 1px 2px 3px grey;
+            border: 2px solid blueviolet;
+            
+
+        }
+        .emergency_list{
+             
+             display: flex;
+             align-items: center;
+             width: fit-content;
+             justify-content: space-between;
+             height: 70px;
+            
+             
+             
+        }
+        ::-webkit-scrollbar {
+            height: 0.001px;
+            width: 0.001px;
+            background-clip: padding-box;
+            overflow: auto;
+        }
+        .emergency{
+            height: 50px;
+             width: 700px;
+            margin-left: 10px;
+            margin-right: 10px;
+             border: 2px solid blueviolet;
+             background-color: palevioletred;
+             display: flex;
+             justify-content: space-evenly;
+             color: purple;
+             align-items: center;
+             font-size: 30px;
+             border-radius: 10px;
+             box-shadow: 0px 2px 3px grey;
+        }
+        .View{
+            width: 250px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid blueviolet;
+            background-color: aqua;
+            color: red;
+            font-size: 20px;
+        }
+        
+        .schedule_board{
+            height: 430px;
+            width: 750px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: rgba(5, 5, 128, 0.1);
+            border: 2px solid blueviolet;
+            box-shadow: 1px 4px 3px grey;
+        }
+        .schedule_statement{
+             text-align: center;
+             height: 50px;
+             border-top-right-radius: 20px;
+             border-top-left-radius: 20px;
+             background-color: blueviolet;
+             margin-top: -44px;
+             font-size: 40px;
+             color: aquamarine;
+        }
+        .scheduled_appointment{
+            display: grid;
+            grid-template-columns: .3fr .3fr .3fr;
+            width: 750px;
+            height: 350px;
+            overflow: auto;
+
+        }
+        .scheduled_appointment::-webkit-scrollbar {
+            width: 5px;
+            background-clip: padding-box;
+            overflow: auto;
+        }
+        .schedule{
+            height: 250px;
+            width: 200px;
+            border: 2px solid blueviolet;
+            background-color: palevioletred;
+            justify-self: center;
+            margin: 20px 18px;
+            border-radius: 20px;
+            box-shadow: 3px 5px 3px gray;
+            padding: 5px 5px ;
+            align-items: center;
+        }
+        .schedule p{
+              font-size: 20px;
+              margin: 8px;
+              color:purple;
+              text-align: center;
+        }
+        .schedule button{
+            font-size: 15px;
+            background-color: palegreen;
+            border: 2px solid blueviolet;
+            color: blueviolet;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 45px;
+        }
+        .right{
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .appointment_request{
+            width: 200px;
+            height: 250px ;
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            background-color: rgba(5, 5, 128, 0.1);
+            overflow: auto;
+
+        }
+        .staff_allocation{
+            width: 200px;
+            height: 250px ;
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            background-color: rgba(5, 5, 128, 0.1);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .appointment_request_statement{
+            width: 205px;
+            height: 42px;
+            border-top-right-radius:20px ;
+            border-top-left-radius: 20px;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .appointment_request_statement p{
+            color: palegreen;
+            font-size: 18px;
+        }
+        .staff_allocation_statement{
+            width: 205px;
+            height: 42px;
+            border-top-right-radius:20px ;
+            border-top-left-radius: 20px;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -36px;
+        }
+        .staff_allocation_statement p{
+            color: palegreen;
+            font-size: 18px;
+        }
+        .appointment_request_list{
+            display: block;
+            border-radius: 20px;
+            height: 200px;
+            overflow: auto;
+        }
+        .appointment_requests{
+            height: 88px;
+             width: 180px;
+            margin-left: 10px;
+             border: 2px solid blueviolet;
+             background-color: palevioletred;
+             display: flex;
+             flex-direction: column;
+             justify-content: space-around;
+             margin-top: 5px;
+             color: purple;
+             align-items: center;
+             font-size: 30px;
+             border-radius: 10px;
+             box-shadow: 0px 2px 3px grey;
+             text-align: center;
+        }
+        .appointment_requests p{
+            font-size: 17px;
+            color: purple;
+            margin-bottom: -1px;
+        }
+        .appointment_request button{
+            height: 20px;
+            width: 50px;
+            background-color: palegreen;
+            border: 1px solid blueviolet ;
+            border-radius: 5px;
+        }
+        .staff1 button{
+            height: 60px;
+            width: 150px;
+            border-radius: 20px;
+            background-color: palevioletred;
+            border: 2px solid blueviolet;
+            font-size: 20px;
+            color: purple;
+            box-shadow: 2px 3px 2px grey;
+        }
+        .staff2 button{
+            height: 60px;
+            width: 150px;
+            border-radius: 20px;
+            font-size: 20px;
+            background-color: palevioletred;
+            border: 2px solid blueviolet;
+            color:purple;
+            box-shadow: 2px 3px 2px grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo.jfif" alt="">
+        </div>
+        <div class="name">
+            <p><b>CareTrack</b></p>
+        </div>
+        <div class="profile_pic">
+            <img src="/static/img/user.png" alt="">
+        </div>
+    </div>
+    <div class="main">
+        <div class="ambulance_status">
+            <div class="ambulance_status_statement">
+               <p><b>Ambulance Status</b></p>
+            </div>
+            <div class="ambulance_list">
+               <div class="ambulance">
+                   <p><b>Driver name:- Tanmay</b></p>
+                   <p><b>Status:- Active/Inactive</b></p>
+               </div>
+               <div class="ambulance">Ambulance2</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+               <div class="ambulance">Ambulance3</div>
+           </div>
+       </div>
+       <div class="mid">
+           <div class="emergencies">
+            <div class="emergency_list">
+                <div class="emergency">
+                    <p><b>Patient Name:- Naman malik</b></p>
+                    <button class="View"><b>EMERGENCY!!</b></button>
+                </div>
+                <div class="emergency"></div>
+                <div class="emergency"></div>
+                <div class="emergency"></div>
+                <div class="emergency"></div>
+                <div class="emergency"></div>
+                <div class="emergency"></div>
+                <div class="emergency"></div>
+            </div>
+               
+           </div>
+           <div class="schedule_board">
+           <div class="schedule_statement">
+               <p><b>Today's Appointments</b></p>
+           </div>
+           <div class="scheduled_appointment">
+               <div class="schedule">
+                   <p><b>Date:- 10/11/2000</b></p>
+                   <p><b>Doc. Name:- Dr. Gaurav Shah</b></p>
+                   <p><b>Timing:- 9:00am to 9:25am</b></p>
+                   <p><b>Ambulance Requested :- NO</b></p>
+                   <button class="Veiw_details"><b>View Details</b></button>
+                   
+               </div>
+               <div class="schedule"></div>
+               <div class="schedule"></div>
+               <div class="schedule"></div>
+               <div class="schedule"></div>
+               <div class="schedule"></div>
+           </div>
+           </div>
+       </div>
+       <div class="right">
+            <div class="appointment_request">
+               <div class="appointment_request_statement">
+                  <p><b>Appointment Request</b></p>
+               </div>
+               <div class="appointment_request_list">
+                      <div class="appointment_requests">
+                        <p><b>Patient Name:- Ishan Aggarwal</b></p>
+                        <button class="see">View</button>
+                      </div>
+                      <div class="appointment_requests"></div>
+                      <div class="appointment_requests"></div>
+                      <div class="appointment_requests"></div>
+                      <div class="appointment_requests"></div>
+                      <div class="appointment_requests"></div>
+                      <div class="appointment_requests"></div>
+                      <div class="appointment_requests"></div>
+               </div>
+            </div>
+            <div class="staff_allocation">
+                <div class="staff_allocation_statement">
+                    <p><b>Staff Allocation</b></p>
+                </div>
+                <a href="/auth/doctor">
+                <div class="staff1">
+                    <button class="doc"><b>Doctor</b></button>
+                </div>
+                </a>
+                <a href="/auth/driver" >
+                <div class="staff2">
+                    <button class="driver"><b>Driver</b></button>
+                </div>
+                </a>
+            </div>
+       </div>
+       
+    </div>
+
+</body>
+</html>

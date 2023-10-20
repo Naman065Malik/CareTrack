@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Driver Registration</title>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .file-input {
+      display: block;
+      margin-top: 5px;
+    }
+
+    button {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Driver ID Allocation</h2>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="driverID">Driver ID:</label>
+        <input type="text" id="driverID" name="driverID" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="hospitalID">Hospital ID:</label>
+        <input type="text" id="hospitalID" name="hospitalID" required>
+      </div>
+
+      <div class="form-group">
+        <label for="driverName">Driver Name:</label>
+        <input type="text" id="driverName" name="driverName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" id="address" name "address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" required>
+      </div>
+
+      <div class="form-group">
+        <label for="ambulanceNumber">Total Number of Ambulance Available:</label>
+        <input type="number" id="ambulanceNumber" name="ambulanceNumber" required>
+      </div>
+
+      <div class="form-group">
+        <label for="licenseNo">License Number:</label>
+        <input type="text" id="licenseNo" name="licenseNo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="licensePhoto">License Photo:</label>
+        <input type="file" id="licensePhoto" name="licensePhoto" class="file-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="aadharNo">Aadhar Number:</label>
+        <input type="text" id="aadharNo" name="aadharNo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="aadharPhoto">Aadhar Photo:</label>
+        <input type="file" id="aadharPhoto" name="aadharPhoto" class="file-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="driverIDPhoto">Driver ID Photo:</label>
+        <input type="file" id="driverIDPhoto" name="driverIDPhoto" class="file-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="profilePhoto">Profile Photo:</label>
+        <input type="file" id="profilePhoto" name="profilePhoto" class="file-input" required>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

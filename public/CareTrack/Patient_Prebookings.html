@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareTrack | PreBookings</title>
+    <style>
+         body {
+            background-image: url(img/background.jfif);
+            background-size: cover;
+            margin: 8px 8px;
+        }
+
+        .navbar {
+            height: 115px;
+            display: flex;
+            justify-content: space-between;
+
+            border-radius: 20px;
+            align-items: center;
+
+
+        }
+        .logo{
+            height: 100px;
+            width: 100px;
+        }
+        .logo img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 20px;
+            box-shadow: 0px 3px 7px grey;
+            ;
+        }
+        
+        .profile_pic img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 55px;
+            box-shadow: 0px 3px 7px grey;
+
+        }
+
+        .name p {
+            font-size: 50px;
+            font-family: cursive;
+            color: blueviolet;
+            text-shadow: 0px 3px 3px;
+        }
+        .prebooking{
+            height: 500px;
+            width: 100%;
+            border: 2px solid blueviolet ;
+            margin-top: 20px ;
+            border-radius: 20px;
+            background-color: rgba(5, 5, 128, 0.1);
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        .form{
+            width: 75%;
+            height: 500px;
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .img img{
+            width: 100%;
+            height: 100%;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .form1{
+            width: 49%;
+            height: 96%;
+            border: 2px solid red;
+            padding: 10px;
+        }
+        .form2{
+            width: 48%;
+            height: 96%;
+            border: 2px solid red;
+        }
+        .statement{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="img/logo.jfif" alt="">
+        </div>
+        <div class="name">
+            <p><b>CareTrack</b></p>
+        </div>
+        <div class="profile_pic">
+            <img src="img/user.png" alt="">
+        </div>
+    </div>
+    <div class="prebooking">
+       
+        <div class="form">
+              <div class="form1">
+                 <div class="statement">
+                    <p><b>Appointment Form</b></p>
+                 </div>
+                 <div class="details">
+                    <label for="Hospitals">Hospitals</label>
+                    <select name="Hospitals" id="Hospitals">
+                        <option value="Namankunj"> Namankunj</option>
+                        <option value="Namankunj"> Namankunj</option>
+                        <option value="Namankunj"> Namankunj</option>
+                    </select>
+                    <select name=""></select>
+                 </div>
+              </div>
+              <div class="form2">
+
+              </div>
+        </div>
+        <div class="img">
+             <img src="img/register.png" alt="">
+        </div>
+    </div>
+</body>
+</html>

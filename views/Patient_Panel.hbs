@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareTrack</title>
+    <style>
+        body {
+            background-image: url(/static/img/background.jfif);
+            background-size: cover;
+            margin: 8px 8px;
+        }
+
+        .navbar {
+            height: 115px;
+            display: flex;
+            justify-content: space-between;
+
+            border-radius: 20px;
+            align-items: center;
+
+
+        }
+        .logo{
+            height: 100px;
+            width: 100px;
+        }
+        .logo img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 20px;
+            box-shadow: 0px 3px 7px grey;
+            ;
+        }
+        
+        .profile_pic img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 55px;
+            box-shadow: 0px 3px 7px grey;
+
+        }
+
+        .name p {
+            font-size: 50px;
+            font-family: cursive;
+            color: blueviolet;
+            text-shadow: 0px 3px 3px;
+        }
+
+        .appointment_history {
+            height: 505px;
+            width: 15%;
+            border: 2px solid blueviolet;
+            background-color: rgba(5, 5, 128, 0.1);
+            margin-top: 20px;
+            border-radius: 20px;
+            box-shadow: 1px 4px 3px grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+
+        .appointment_list {
+            display: block;
+            border-radius: 20px;
+            height: 450px;
+            overflow: auto;
+
+        }
+
+        .appointment_list::-webkit-scrollbar {
+            width: 5px;
+            background-clip: padding-box;
+            overflow: auto;
+        }
+
+        .appointment_statement {
+            font-size: 20px;
+            text-align: center;
+            height: 40px;
+            width: 205px;
+            background-color: blueviolet;
+            color: palegreen;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .appointment {
+            height: 80px;
+            width: 180px;
+            align-self: center;
+            background-color:palevioletred;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 10px 4px 3px grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            border: 2px solid blueviolet ;
+            }
+        .appointment p{
+            font-size: 14px;
+            margin: 2px 2px ;
+            color: purple;
+            
+        }
+        .main{
+            display: flex;
+            justify-content: space-between;
+        }
+        .mid{
+            display: flex;
+            flex-direction: column;
+        }
+        .emergency{
+            height: 70px;
+            width: 750px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgba(5, 5, 128, 0.1);
+            align-items: center;
+            border-radius: 20px;
+            box-shadow: 1px 2px 3px grey;
+            border: 2px solid blueviolet;
+
+        }
+        .emergency p{
+            font-size: 30px;
+            color: purple;
+            text-shadow: 0px 3px 3px;
+        }
+        .emergency button{
+            height: 45px;
+            background-color: palevioletred;
+            border-radius: 20px;
+            color:purple;
+            font-size: 20px;
+            border: 2px solid blueviolet;
+        }
+        
+        .schedule_board{
+            height: 430px;
+            width: 750px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background-color: rgba(5, 5, 128, 0.1);
+            border: 2px solid blueviolet;
+            box-shadow: 1px 4px 3px grey;
+        }
+        .schedule_statement{
+             text-align: center;
+             height: 50px;
+             border-top-right-radius: 20px;
+             border-top-left-radius: 20px;
+             background-color: blueviolet;
+             margin-top: -44px;
+             font-size: 40px;
+             color: aquamarine;
+        }
+        .scheduled_appointment{
+            display: grid;
+            grid-template-columns: .3fr .3fr .3fr;
+            width: 750px;
+            height: 350px;
+            overflow: auto;
+
+        }
+        .scheduled_appointment::-webkit-scrollbar {
+            width: 5px;
+            background-clip: padding-box;
+            overflow: auto;
+        }
+        .schedule{
+            height: 250px;
+            width: 200px;
+            border: 2px solid blueviolet;
+            background-color: palevioletred;
+            justify-self: center;
+            margin: 20px 20px;
+            border-radius: 20px;
+            box-shadow: 3px 5px 3px gray;
+        }
+        .schedule p{
+              font-size: 17px;
+              margin: 6px;
+              color:purple;
+        }
+        .schedule button{
+            font-size: 15px;
+            background-color: palegreen;
+            border: 2px solid blueviolet;
+            color: blueviolet;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-left: 15px;
+        }
+        .settings{
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .other_functions{
+            width: 200px;
+            height:370px;
+            background-color: rgba(5, 5, 128, 0.1);
+            border: 2px solid blueviolet;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        .functions{
+            width: 170px;
+            height:50px;
+            display: flex;
+            background-color: palevioletred;
+            border: 2px solid blueviolet;
+            border-radius: 10px;
+            box-shadow: 4px 4px 10px grey;
+            align-items: center;
+            justify-content: center;
+            color: purple;
+            font-size: 20px;
+            
+
+        }
+        
+        .track{
+            width: 200px;
+            height: 120px;
+            border-radius: 22px;
+            background-color: palevioletred;
+            border: 2px solid blueviolet ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .track_statement{
+            background-color: blueviolet;
+            width: 100%;
+            text-align: center;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            font-size: 15px;
+            color: palegreen;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo.jfif" alt="">
+        </div>
+        <div class="name">
+            <p><b>CareTrack</b></p>
+        </div>
+        <div class="profile_pic">
+            <img src="/static/img/user.png" alt="">
+        </div>
+    </div>
+    <div class="main">
+        <div class="appointment_history">
+            <div class="appointment_statement">
+                <p><b>Appointment History</b></p>
+            </div>
+            <div class="appointment_list">
+                <div class="appointment">
+                    <p><b>Date:- 10/11/2000</b></p>
+                    <p><b>Doc. Name:- Dr. Gaurav Shah</b></p>
+                    <p><b>Timing:- 9:00am to 9:25am</b></p>
+                </div>
+                <div class="appointment">Appointment2</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+                <div class="appointment">Appointment3</div>
+            </div>
+    
+        </div>
+        <div class="mid">
+            <div class="emergency">
+                 <p><b>EMERGENCY!!</b></p>
+                 <button type="submit"><b>BOOK AMBULANCE</b></button>
+            </div>
+            <div class="schedule_board">
+            <div class="schedule_statement">
+                <p><b>Appointment Schedule</b></p>
+            </div>
+            <div class="scheduled_appointment">
+                <div class="schedule">
+                    <p><b>Date:- 10/11/2000</b></p>
+                    <p><b>Doc. Name:- Dr. Gaurav Shah</b></p>
+                    <p><b>Timing:- 9:00am to 9:25am</b></p>
+                    <p><b>Ambulance Requested :- NO</b></p>
+                    <button class="Veiw_details"><b>View Details</b></button>
+                    <button class="Book Ambulance"><b>Book Ambulance</b></button>
+                </div>
+                <div class="schedule"></div>
+                <div class="schedule"></div>
+                <div class="schedule"></div>
+                <div class="schedule"></div>
+                <div class="schedule"></div>
+            </div>
+            </div>
+        </div>
+        <div class="settings">
+            <div class="other_functions">
+                 <a href="/profile" style="text-decoration: none;">
+                    <div class="functions">
+                        <p><b>Profile</b></p>
+                     </div>
+                 </a>
+                <a href="Patient_Prebookings.html" style="text-decoration: none;"> 
+                    <div class="functions">
+                        <p><b>Pre Bookings</b></p>
+                     </div>
+                </a> 
+                 <a href="/register" style="text-decoration: none;">
+                    <div class="functions">
+                        <p><b>Register</b></p>
+                     </div>
+                 </a>
+                 <a href="/auth" style="text-decoration: none;">
+                    <div class="functions">
+                        <p><b>Login</b></p>
+                     </div>
+                 </a>
+                 
+                 <div class="functions">
+                    <p><b>Log out</b></p>
+                 </div>
+            </div>
+            <div class="track">
+                <div class="track_statement">
+                    <p><b>Track Ambulance</b></p>
+                </div>
+                <div class="co-ordinates">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>

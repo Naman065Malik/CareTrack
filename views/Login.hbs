@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareTrack | Login</title>  
+    <style>
+        body {
+            background-image: url(/static/img/background.jfif);
+            background-size: cover;
+        }
+
+        .login {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 150px;
+            width: 150px;
+            border: 3px solid blueviolet;
+            border-radius: 30px;
+            box-shadow: 0px 3px 7px grey;
+            margin-top: 70px ;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        .form input {
+            height: 35px;
+            width: 250px;
+            border-radius: 20px;
+            background-color: rgba(225, 225, 225, 0.5);
+            text-align: center;
+            font-size: 30px;
+            border: 1px solid blueviolet;
+            box-shadow: 0px 3px 7px grey;
+            margin:10px 10px ;
+        }
+
+        .form button {
+            height: 35px;
+            width: 200px;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            outline: none;
+            box-shadow: 0px 3px 7px grey;
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.5);
+            margin:10px 10px ;
+        }
+        .form input:hover{
+            height:38px;
+            width: 275px;
+        }
+        .form button:hover{
+            height:38px;
+            width: 220px;
+        }
+        .form p{
+            font-size: 28px;
+            color: blueviolet;
+        }
+        .query p{
+            text-align: center;
+            font-size: 30px;
+            color: blueviolet;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <div class="logo">
+            <img src="/static/img/logo.jfif" alt="">
+        </div>
+        <form class="form" method="post">
+            <p><b>SIGN IN!!</b></p>
+            <input type="text" placeholder="User-ID" name="userID" required>
+            <input type="text" placeholder="Password" name="password" required>
+            <button type="submit">Login Now </button>
+        </form>
+        <div class="query">
+            <p><b>Don't have an account??</b> <a href="/register">REGISTER NOW!!</a></p>
+        </div>
+    </div>
+    
+</body>
+
+</html>

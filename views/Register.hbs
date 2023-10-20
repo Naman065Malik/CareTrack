@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareTrack | Register</title>
+    <style>
+        body {
+            background-image: url(/static/img/background.jfif);
+            background-size: cover;
+        }
+        .register{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blue;
+            border-radius: 20px;
+            box-shadow: 0px 3px 7px grey;
+            align-self: center;
+            margin-top: 60px;
+
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #statement p{
+            font-size: 35px;
+            color: darkblue;
+        }
+        #query{
+            font-size: 30px;
+            color: darkblue;
+        }
+        label{
+            color: darkblue;
+            font-size: 28px;
+        }
+        input{
+            margin-top: 20px;
+            height: 20px;
+            border: 2pxc solid blue;
+            width: 20px;
+        }
+        .query{
+            font-size: 30px;
+            color: darkblue;
+        }
+        button {
+            height: 35px;
+            width: 200px;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 2px solid blue;
+            outline: none;
+            box-shadow: 0px 3px 7px grey;
+            cursor: pointer;
+            background-color: rgba(225, 225, 225, 0.5);
+            margin:20px 10px ;
+        }
+        .form button:hover{
+            height:38px;
+            width: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register">
+        
+            <div class="logo">
+                <img src="/static/img/logo.jfif" alt="">
+            </div>
+        
+        <div class="form">
+            <div id="statement">
+                <p><b>Register Now!!</b></p>
+            </div>
+            <div id="query">
+                <p><b>Who are you??</b></p>
+            </div>
+            <div id="input">
+                <form> 
+                    <input  type="checkbox" value="Hospital" id="need1"name="need1">
+                    <label for="need1"><b>Hospital</b> </label><br>
+                    <input  type="checkbox" value="Patient" id="need2" name="need2">
+                    <label for="need2"><b>Patient</b></label><br>
+                    <button type="button" onclick="redirectToRoute()">Register here</button>
+                </form>
+
+            </div>
+            <div class="query">
+                  <p><b>Already have an account??<a href="/auth">SIGN IN!!</a> </b></p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function redirectToRoute() {
+        const checkbox1 = document.getElementById('need1');
+        const checkbox2 = document.getElementById('need2');
+
+        if (checkbox1.checked && checkbox2.checked) {
+            alert('Please select only one option.');
+        } else if (checkbox1.checked) {
+            window.location.href = '/auth/hospital'; // Redirect to the hospital route
+        } else if (checkbox2.checked) {
+            window.location.href = '/register/patient'; // Redirect to the patient route
+        } else {
+            alert('Please select an option.');
+        }
+        }
+    </script>
+</body>
+
+</html>

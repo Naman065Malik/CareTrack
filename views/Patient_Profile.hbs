@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareTrack | Patient | Profile</title>
+    <style>
+        body{
+            background-image: url(/static/img/background.jfif);
+            background-size: cover;
+        }
+        .navbar {
+            height: 115px;
+            display: flex;
+            justify-content: space-between;
+
+            border-radius: 20px;
+            align-items: center;
+
+
+        }
+        .logo{
+            height: 100px;
+            width: 100px;
+        }
+        .logo img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 20px;
+            box-shadow: 0px 3px 7px grey;
+            ;
+        }
+        
+        .profile_pic img {
+            height: 100px;
+            width: 100px;
+            border: 3px solid blueviolet;
+            border-radius: 55px;
+            box-shadow: 0px 3px 7px grey;
+
+        }
+
+        .name p {
+            font-size: 50px;
+            font-family: cursive;
+            color: blueviolet;
+            text-shadow: 0px 3px 3px;
+        }
+        .profile{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            box-shadow: 1px 2px 3px grey;
+            background-color: rgba(5, 5, 128, 0.1);
+        }
+        .profile_details{
+            height: 500px;
+            width: 48%;
+            
+            
+            
+            
+        }
+        .profile_picture{
+            height: 500px;
+            width: 48%;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            
+
+        }
+        .statement p{
+           font-size: 40px;
+           color: blueviolet;
+           text-shadow: 0px 3px 3px;
+           padding-left:10px ;
+        }
+        .detail{
+            font-size: 22px;
+            color: purple;
+            padding-left:10px ;
+            width: 77%;
+            
+        }
+        .photo img{
+            height: 250px;
+            width: 250px;
+            border-radius: 55px;
+            border: 2px solid blueviolet;
+            border-radius: 150px;
+            box-shadow: 2px 2px 1px ;
+            
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+        }
+        .buttons button{
+            height: 40px;
+            width: 200px;
+            background-color: palevioletred;
+            font-size: 20px;
+            border-radius: 20px;
+            border: 2px solid blueviolet;
+            color: purple;
+            box-shadow: 2px 1px 2px ;
+        }
+        .buttons button:hover{
+            height: 45px;
+            width: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="/static/img/logo.jfif" alt="">
+        </div>
+        <div class="name">
+            <p><b>CareTrack</b></p>
+        </div>
+        <div class="profile_pic">
+            <img src="/static/img/user.png" alt="">
+        </div>
+    </div>
+    <div class="profile">
+
+        <div class="profile_details">
+            <div class="statement">
+                <p><b>Profile</b></p>
+            </div>
+            <div class="detail">
+                <p><b>Patient ID: {{user.patientID}}</b></p>
+            </div>
+            <div class="detail">
+                 <p><b>Patient name: {{user.name}}</b></p>
+            </div>
+            <div class="detail">
+                 <p><b>Patient Age: {{user.age}}</b></p>
+            </div>
+            <div class="detail">
+                 <p><b>Patient Address: {{user.address}}</b></p>
+            </div>
+            <div class="detail">
+                 <p><b>Patient Diseasde/Disability: {{user.disease}}</b></p>
+            </div>
+            <div class="detail">
+                <p><b>Patient Password: {{user.password}}</b></p>
+            </div>
+            <div class="detail">
+                 <p><b>Patient Phone number: {{user.Pnumber}}</b></p>
+            </div>
+        </div>
+        <div class="profile_picture">
+                <div class="photo">
+                    <img src="/static/img/user.png" alt="">
+                </div>
+                <div class="buttons">
+                    <div class="upadate_button">
+                       <a href="/profile/update" style="text-decoration: none;"><button type="submit">Update</button></a> 
+                    </div>
+                    <div class="Save">
+                        <button type="submit">Save</button>
+                    </div>
+                </div>
+                
+                
+                
+        </div>
+    </div>
+</body>
+</html>
